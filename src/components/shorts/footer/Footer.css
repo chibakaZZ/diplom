@@ -1,0 +1,60 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(32, 32, 41);
+}
+
+.footer1 {
+  width: 25%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.199);
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.footer2 {
+  width: 25%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.199);
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.footer3 {
+  width: 25%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.199);
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.footericons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.footericons:hover {
+  transform: scale(1.3);
+}
+
+.facebook {
+  color: #ffffff;
+  width: 60px;
+  height: 60px;
+}
+
+.instagram {
+  color: #ffffff;
+  width: 60px;
+  height: 60px;
+}
+
+.download {
+  color: #ffffff;
+  width: 60px;
+  height: 60px;
+}
