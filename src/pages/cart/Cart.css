@@ -1,0 +1,99 @@
+.cartcontainer {
+  width: 800px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.171);
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #00000034;
+  border-radius: 45px;
+}
+
+.carts {
+  display: flex;
+  width: 770px;
+  height: 220px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 17px;
+  border-bottom: 1px solid #00000034;
+}
+
+.productimg {
+  width: 150px;
+  height: 220px;
+  background-color: bisque;
+  background-image: url(../../../public/img/adoption/products//guineapig.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 30px;
+  user-select: none;
+  transition: all 1s;
+  border-radius: 45px;
+}
+
+.productimg:hover {
+  transform: scale(1.1);
+}
+
+.cartinfo {
+  flex-direction: row;
+  user-select: none;
+}
+
+.cartbuttons {
+  display: flex;
+  width: 280px;
+  height: 45px;
+}
+
+.buybutton {
+  width: 120px;
+  height: 45px;
+  border-color: rgb(255, 44, 44);
+  background-color: rgba(0, 0, 0, 0.774);
+  color: white;
+  margin-right: 10px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+}
+.buybutton:hover {
+  border-radius: 45px;
+  border-color: rgb(62, 255, 3);
+  background-color: rgba(255, 255, 255, 0.774);
+  color: rgb(0, 0, 0);
+  margin-right: 10px;
+}
+
+.addcartbtn {
+  width: 120px;
+  height: 45px;
+  border-color: rgb(255, 44, 44);
+  background-color: rgba(0, 0, 0, 0.774);
+  color: white;
+  margin-right: 10px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.addcartbtn:hover {
+  border-radius: 45px;
+  border-color: rgb(62, 255, 3);
+  background-color: rgba(255, 255, 255, 0.774);
+  color: rgb(0, 0, 0);
+}
+
+.addcart {
+  width: 20px;
+  height: 20px;
+}
+
+.cartbtncontainer {
+  width: 110px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+}

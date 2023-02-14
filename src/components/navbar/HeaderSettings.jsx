@@ -21,9 +21,13 @@ function HeaderSettings() {
         </div>
 
         <div className="icons">
-          <FiSettings className="settingsiconbar" />
+          <NavLink to={"/settings"}>
+            <FiSettings className="settingsiconbar" />
+          </NavLink>
           <div className="borderright"></div>
-          <BiCartAlt className="carticon" />
+          <NavLink to={"/cart"}>
+            <BiCartAlt className="carticon" />
+          </NavLink>
           <div className="borderright"></div>
           <BiUserCircle className="user" />
           <FaBars className="bars" />
