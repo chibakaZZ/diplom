@@ -19,19 +19,19 @@ function LoginTest() {
       password,
     });
 
-    console.log(res);
+    const data = await res.data;
+
+    console.log(data.type);
   };
 
   return (
     <div>
-      <div>
-        <label>Username :</label>
-        <input type="text" />
-        <label>Password :</label>
-        <input type="text" />
-        <button onClick={handleLogin}>login</button>
-        <h2>Status:</h2>
-      </div>
+      <label>Username :</label>
+      <input type="text" onChange={handleUsername} />
+      <label>Password :</label>
+      <input type="text" onChange={handlePassword} />
+      <button onClick={handleLogin}>login</button>
+      <h2>Status:</h2>
     </div>
   );
 }
