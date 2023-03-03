@@ -8,7 +8,7 @@ function SignIn() {
   const [user, setUser] = useState("");
   const Sign = () => {
     axios
-      .post("http://localhost:3005/user", {
+      .post("http://localhost:3003/user", {
         username: user,
       })
       .then(function (response) {
@@ -22,6 +22,7 @@ function SignIn() {
         console.log(error);
       });
   };
+
   return (
     <React.Fragment>
       <Header />
