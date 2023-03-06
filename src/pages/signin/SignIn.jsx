@@ -1,26 +1,40 @@
-import React, { useState } from "react";
 import "./SignIn.css";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/navbar/Header";
 
 function SignIn() {
-  const [user, setUser] = useState("");
-  const Sign = () => {
-    axios
-      .post("http://localhost:3003/user", {
-        username: user,
-      })
-      .then(function (response) {
-        if (response.data === "OK") {
-          console.log("Newterlee...");
-        } else {
-          console.log("Shalgana uu...");
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [status, setStatus] = useState("false");
+
+  const history = useNavigate();
+
+  const handleUsername = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleLogin = async () => {
+    const res = await axios.post("http://localhost:3005/signin", {
+      username,
+      password,
+    });
+
+    const data = await res.data;
+
+    console.log(data);
+
+    if (data.type == "success") {
+      setStatus("success");
+      history("/");
+    } else {
+      setStatus("Failed");
+    }
   };
 
   return (
@@ -33,35 +47,23 @@ function SignIn() {
             <div className="infos">
               <div className="infotxt">Нэвтрэх нэр</div>
               <div>
-                <input
-                  type="text"
-                  className="input"
-                  onChange={(e) => {
-                    setUser(e.target.value);
-                  }}
-                />
+                <input type="text" onChange={handleUsername} />
               </div>
             </div>
             <div className="infos">
               <div className="infotxt">Нууц үг</div>
               <div>
-                <input type="text" className="input" />
+                <input type="text" onChange={handlePassword} />
               </div>
             </div>
           </div>
           <div>
-            <button className="signupbtn">
-              <Link className="signinlink" to={"/products"}>
-                Нэвтрэх
-              </Link>
-            </button>
-          </div>
-          <div>
-            <button className="signinbtn" onClick={Sign}>
-              Бүртгүүлэх
+            <button onClick={handleLogin} className="signinbtn">
+              Нэвтрэх
             </button>
           </div>
           <p className="forget">Нууц үг сэргээх</p>
+          <h2>Status: {!status ? "Failed" : "Success"}</h2>
         </div>
       </div>
     </React.Fragment>

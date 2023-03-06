@@ -1,9 +1,46 @@
-import React from "react";
 import "./SignUp.css";
 import { Link } from "react-router-dom";
 import Header from "../../components/navbar/Header";
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [status, setStatus] = useState(false);
+
+  const history = useNavigate();
+
+  const handleUsername = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleConfirmPassword = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleSignUp = async () => {
+    const res = await axios.post("http://localhost:3005/signup", {
+      username,
+      password,
+    });
+
+    const data = await res.data;
+
+    if (data.type == "success") {
+      setStatus("success");
+      history("/signin");
+    } else {
+      setStatus("Failed");
+    }
+  };
+
   return (
     <React.Fragment>
       <Header />
@@ -13,38 +50,29 @@ function SignUp() {
           <div className="info">
             <div className="infos">
               <div className="infotxt">Нэвтрэх нэр</div>
-              <div>
-                <input type="text" className="input" />
-              </div>
+              <input type="text" onChange={handleUsername} />
             </div>
             <div className="infos">
               <div className="infotxt">Нууц үг</div>
-              <div>
-                <input type="text" className="input" />
-              </div>
+              <input type="text" onChange={handlePassword} />
             </div>
             <div className="infos">
               <div className="infotxt">Нууц үг дахин оруулна уу</div>
-              <div>
-                <input type="text" className="input" />
-              </div>
+              <input type="text" onChange={handleConfirmPassword} />
             </div>
           </div>
           <div>
-            <button className="signupbtn">
-              <Link className="signinlink" to={"/signin"}>
-                Бүртгүүлэх
-              </Link>
-            </button>
+            <button onClick={handleSignUp}>Sign up</button>
           </div>
-          <div>
+          {/* <div>
             <button className="signinbtn">
               <Link className="signinlink" to={"/signin"}>
                 Нэвтрэх
               </Link>
             </button>
-          </div>
+          </div> */}
           <p className="forget">Нууц үг сэргээх</p>
+          <h2>Status: {!status ? "Failed" : "Success"}</h2>
         </div>
       </div>
     </React.Fragment>

@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-function LoginTest() {
+function SignUpTest() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [status, setStatus] = useState("false");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [status, setStatus] = useState(false);
 
   const history = useNavigate();
 
@@ -17,19 +18,21 @@ function LoginTest() {
     setPassword(e.target.value);
   };
 
-  const handleLogin = async () => {
-    const res = await axios.post("http://localhost:3005/login", {
+  const handleConfirmPassword = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleSignUp = async () => {
+    const res = await axios.post("http://localhost:3005/signup", {
       username,
       password,
     });
 
     const data = await res.data;
 
-    console.log(data);
-
     if (data.type == "success") {
       setStatus("success");
-      history("/");
+      history("/logintest");
     } else {
       setStatus("Failed");
     }
@@ -41,10 +44,12 @@ function LoginTest() {
       <input type="text" onChange={handleUsername} />
       <label>Password :</label>
       <input type="text" onChange={handlePassword} />
-      <button onClick={handleLogin}>login</button>
+      <label>Confirm Password : </label>
+      <input type="text" onChange={handleConfirmPassword} />
+      <button onClick={handleSignUp}>Sign up</button>
       <h2>Status: {!status ? "Failed" : "Success"}</h2>
     </div>
   );
 }
 
-export default LoginTest;
+export default SignUpTest;

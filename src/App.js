@@ -9,6 +9,7 @@ import SignUp from "./pages/signup/SignUp";
 import SignIn from "./pages/signin/SignIn";
 import Settings from "./pages/settings/Settings";
 import LoginTest from "./pages/LoginTest";
+import SignUpTest from "./pages/SignUpTest";
 // import NoPage from "./pages/NoPage";
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/logintest" element={<LoginTest />} />
+        <Route path="/signuptest" element={<SignUpTest />} />
         {/* <Route path="*" element={<NoPage />} /> */}
         {/* </Route> */}
       </Routes>
