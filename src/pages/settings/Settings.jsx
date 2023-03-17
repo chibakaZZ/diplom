@@ -13,11 +13,9 @@ function Settings() {
             <FiSettings className="settingsicon" />
             Тохиргоо
           </div>
+          <div className="settext1">Профайл зураг солих</div>
+          <div className="settext1">Нэр солих</div>
           <div className="settext1">Нууц үг солих</div>
-          <div className="settext1">Захиалгын түүх харах</div>
-          <div className="settext1">Бонус оноо шалгах</div>
-          <div className="settext1">Хямдралтай бараа харах</div>
-          <div className="settext1">Гарах</div>
         </div>
       </div>
     </React.Fragment>

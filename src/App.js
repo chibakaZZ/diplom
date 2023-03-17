@@ -10,6 +10,9 @@ import SignIn from "./pages/signin/SignIn";
 import Settings from "./pages/settings/Settings";
 import LoginTest from "./pages/LoginTest";
 import SignUpTest from "./pages/SignUpTest";
+import Cart from "./pages/cart/Cart.jsx";
+import User from "./pages/user/User.jsx";
+import ProductInfo from "./components/shorts/service/Service";
 // import NoPage from "./pages/NoPage";
 
 export default function App() {
@@ -25,6 +28,9 @@ export default function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/logintest" element={<LoginTest />} />
         <Route path="/signuptest" element={<SignUpTest />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/productinfo" element={<ProductInfo />} />
         {/* <Route path="*" element={<NoPage />} /> */}
         {/* </Route> */}
       </Routes>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeaderSettings.css";
 import { FaBars } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { BiUserCircle, BiCartAlt } from "react-icons/bi";
 import { FiSettings } from "react-icons/fi";
 
@@ -21,11 +21,17 @@ function HeaderSettings() {
         </div>
 
         <div className="icons">
-          <FiSettings className="settingsiconbar" />
+          <Link to={"/settings"}>
+            <FiSettings className="settingsiconbar" />
+          </Link>
           <div className="borderright"></div>
-          <BiCartAlt className="carticon" />
+          <Link to={"/cart"}>
+            <BiCartAlt className="carticon" />
+          </Link>
           <div className="borderright"></div>
-          <BiUserCircle className="user" />
+          <Link to={"/user"}>
+            <BiUserCircle className="user" />
+          </Link>
           <FaBars className="bars" />
         </div>
       </div>

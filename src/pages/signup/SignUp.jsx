@@ -1,11 +1,11 @@
 import "./SignUp.css";
-import { Link } from "react-router-dom";
 import Header from "../../components/navbar/Header";
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function SignUp() {
+  const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -15,6 +15,10 @@ function SignUp() {
 
   const handleUsername = (e) => {
     setUsername(e.target.value);
+  };
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
   };
 
   const handlePassword = (e) => {
@@ -51,6 +55,10 @@ function SignUp() {
             <div className="infos">
               <div className="infotxt">Нэвтрэх нэр</div>
               <input type="text" onChange={handleUsername} />
+            </div>
+            <div className="infos">
+              <div className="infotxt">Цахим шуудан</div>
+              <input type="text" onChange={handleEmail} />
             </div>
             <div className="infos">
               <div className="infotxt">Нууц үг</div>

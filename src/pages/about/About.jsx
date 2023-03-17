@@ -1,16 +1,11 @@
 import React from "react";
 import "./About.css";
-import Header from "../../components/navbar/Header";
+import Service from "../../components/shorts/service/Service";
 
 function About() {
   return (
     <React.Fragment>
-      <Header />
-      <div className="about">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <Service />
     </React.Fragment>
   );
 }

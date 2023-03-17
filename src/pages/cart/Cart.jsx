@@ -21,7 +21,7 @@ function Cart() {
               <button className="addcartbtn">
                 <div className="cartbtncontainer">
                   <BiCartAlt className="addcart" />
-                  Сагсанд нэмэх
+                  Сагснаас хасах
                 </div>
               </button>
             </div>
