@@ -1,0 +1,112 @@
+.about {
+    width: 1200px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.aboutimg {
+    width: 500px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
+.abouttext {
+    width: 700px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.195);
+}
+  
+.servicetitle{
+    text-align: center;
+}
+
+.servicetext{
+    text-align: center;
+}
+
+@media screen and (max-width: 1400px) {
+    .aboutimg {
+        width: 450px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.377);
+    }
+    
+    .abouttext {
+        width: 650px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.195);
+    }
+  }
+
+  @media screen and (max-width: 1115px) {
+    .aboutimg {
+        width: 400px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.377);
+    }
+    
+    .abouttext {
+        width: 600px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.195);
+    }
+  }
+
+  @media screen and (max-width: 1020px) {
+    .aboutimg {
+        width: 350px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.377);
+    }
+    
+    .abouttext {
+        width: 550px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.195);
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    .aboutimg {
+        width: 500px;
+        height: 500px;
+        background-color: rgba(0, 0, 0, 0.377);
+    }
+    
+    .abouttext {
+        width: 500px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.195);
+    }
+
+    .about {
+        width: 500px;
+        height: 800px;
+        flex-direction: column;
+        
+    }
+  }
+
+  @media screen and (max-width: 525px) {
+    .aboutimg {
+        width: 400px;
+        height: 500px;
+        background-color: rgba(0, 0, 0, 0.377);
+    }
+    
+    .abouttext {
+        width: 400px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.195);
+    }
+
+    .about {
+        width: 400px;
+        height: 800px;
+        flex-direction: column;
+        
+    }
+  }

@@ -1,0 +1,90 @@
+.container1 {
+  background-image: url(../../../public/img/pets/dog.jfif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1000px;
+  position: fixed;
+}
+
+.container {
+  width: 400px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.409);
+  margin: auto;
+  text-align: center;
+  top: 50px;
+  margin-top: 150px;
+  border-radius: 45px;
+  user-select: none;
+}
+.signups {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: x-large;
+  font-weight: 600;
+}
+.input {
+  width: 270px;
+  height: 30px;
+  border-radius: 45px;
+}
+
+.infos {
+  margin-top: 20px;
+}
+
+.infos input {
+  padding-left: 18px;
+}
+
+.signupbtn {
+  margin-top: 30px;
+  width: 150px;
+  height: 30px;
+  border-radius: 45px;
+  border-color: rgb(234, 182, 109);
+  background-color: rgb(247, 220, 181);
+}
+
+.signupbtn:hover {
+  transition: 0.3s ease-in-out;
+  background-color: rgb(234, 182, 109);
+}
+
+.signinbtn {
+  margin-top: 20px;
+  border-radius: 45px;
+  width: 100px;
+  height: 40px;
+  border-color: rgb(234, 182, 109);
+  background-color: rgb(247, 220, 181);
+}
+
+.signinbtn:hover {
+  transition: 0.3s ease-in-out;
+  background-color: rgb(234, 182, 109);
+}
+
+.signinlink {
+  text-decoration: none;
+  color: black;
+}
+
+.infotxt {
+  font-size: large;
+  font-weight: 500;
+}
+
+.forget {
+  margin-top: 1px;
+}
+
+.forget:hover {
+  margin-top: 1px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s ease-in-out;
+}

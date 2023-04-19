@@ -1,0 +1,110 @@
+.header {
+  height: 80px;
+  display: flex;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.283);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.logo {
+  font-size: xx-large;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  color: black;
+}
+
+.signup {
+  border: none;
+  padding: 15px 32px;
+  background-color: rgb(247, 220, 181);
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s ease-in-out;
+}
+
+.signup a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.signin {
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  background-color: rgb(247, 220, 181);
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s ease-in-out;
+}
+
+.menu a {
+  font-size: large;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin-left: 15px;
+  margin-right: 15px;
+  user-select: none;
+}
+
+.menu a:hover {
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.521);
+  transition: ease-in-out 0.3s;
+}
+
+.signup:hover {
+  background-color: rgb(202, 174, 109);
+}
+
+.signin:hover {
+  background-color: rgb(202, 174, 109);
+}
+
+@media screen and (max-width: 1042px) {
+  .menu a {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu a {
+    display: none;
+  }
+
+  .signup {
+    display: none;
+  }
+
+  .signin {
+    display: none;
+  }
+
+  svg.bars {
+    opacity: 1;
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+  }
+}
+
+.bars {
+  opacity: 0;
+}

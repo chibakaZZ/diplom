@@ -1,0 +1,49 @@
+.settingscont {
+  width: 100%;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  justify-content: center;
+  padding-top: 90px;
+  background-image: url(../../../public//img/adoption/settings.jpg);
+}
+.settings {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(247, 220, 181, 0.829);
+  text-align: center;
+  margin: auto;
+  border-radius: 45px;
+}
+
+.settext {
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding-top: 40px;
+  font-weight: 500;
+  user-select: none;
+  padding-bottom: 40px;
+}
+
+.settext1 {
+  padding-top: 20px;
+  font-size: 20px;
+  user-select: none;
+  width: 230px;
+  margin: auto;
+  transition: 0.3s ease-in-out;
+}
+
+.settext1:hover {
+  padding-top: 20px;
+  font-size: 20px;
+  user-select: none;
+  border-bottom: 1px solid rgb(66, 66, 66);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.settingsicon {
+  font-size: 20px;
+  margin-right: 10px;
+}
