@@ -2,14 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA5Mn1zrMH42cFC-3lKNGdvljIKlXuXXXo",
-  authDomain: "login-c23a9.firebaseapp.com",
-  projectId: "login-c23a9",
-  storageBucket: "login-c23a9.appspot.com",
-  messagingSenderId: "869586626300",
-  appId: "1:869586626300:web:3f6938265602947cbc1979",
-  measurementId: "G-CG2PXB7YWV"
-};
+    apiKey: "AIzaSyDaIT5CcnkhArdOdHmaBYJVNKrDKhtelmg",
+    authDomain: "diploma-8bbaf.firebaseapp.com",
+    projectId: "diploma-8bbaf",
+    storageBucket: "diploma-8bbaf.appspot.com",
+    messagingSenderId: "271033689152",
+    appId: "1:271033689152:web:d2aedc8df98b0c03702ba5",
+    measurementId: "G-JXGFLPR62E"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

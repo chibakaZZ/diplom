@@ -3,13 +3,28 @@ import Header from "../../components/navbar/Header";
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { authentication } from "../../firebase/firebase";
+import { GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
+
 
 function SignUp() {
+  const provider = new GoogleAuthProvider();
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [status, setStatus] = useState(false);
+
+  const signWithGoogle = () => {
+    signInWithPopup(authentication, provider)
+    .then((response)=>{
+        console.log('response---->', response)
+        alert('Google-r amjilttai bvrtgelee');
+    })
+    .catch((error) => {
+        console.log('error --<', error)
+    })
+}
 
   const history = useNavigate();
 
