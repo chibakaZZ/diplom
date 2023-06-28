@@ -32,68 +32,67 @@ function Footer() {
     //   </div>
     // </div>
     <>
-      <div >
-        <div style={{
-          display: "flex",
-          justifyContent: "space-around",
-          background: '#141414',
-          //  flexDirection: 'column',
-           alignItems: 'center',
-           height: '400px'
-        }}>[]
-          <div className="petsFooter" >
-            <h4>Дэлгэрэнгүй мэдээлэл</h4>
-            <ul>
-              <li><a href="#">Хэрхэн захиалга өгөх вэ ?</a></li>
-              <li><a href="#">Асуулт хариулт</a></li>
-              <li><a href="contact.html">Хаяг байршил</a></li>
-              <li><a href="#">Гишүүнчлэл</a></li>
-            </ul>
-          </div>
-          <div className="petsFooter" >
-            <h4>CATEGORIES</h4>
-            <ul >
-              <li><a href="#">Bed linen</a></li>
-              <li><a href="#">Cushions</a></li>
-              <li><a href="#">Duvets</a></li>
-              <li><a href="#">Pillows</a></li>
-              <li><a href="#">Protectors</a></li>
-            </ul>
-          </div>
-          <div className="petsFooter"  style={{marginBottom: '70px'}}>
-            <h4>NEWSLETTER</h4>
-            <div className="stay agileinfo">
-              <div className="stay-left wthree">
-                <form action="#" method="post">
-                  <input type="text" placeholder="Enter your email " required="" />
-                </form>
-              </div>
-              <div className="btn-1 w3-agileits">
-                <form action="#" method="post">
-                  <input type="submit" value="Subscribe" />
-                </form>
-              </div>
-            </div>
-          </div>
-          <div className="petsFooter" >
-            <h4>CONTACT US</h4>
-            <p>Contrary to popular belief</p>
-            <p>The standard chunk</p>
-            <p>office :  +12 34 995 0792</p>
+      <div style={{
+        background: '#141414',
+        height: '300px',
+        display: "flex",
+        justifyContent: 'space-around',
+        alignItems: 'center'
+      }}>
+        <div className="moreInfo">
+          <h3 className="title">Дэлгэрэнгүй мэдээлэл</h3>
+          <ul>
+            <li>Асуулт хариулт</li>
+            <li>Гишүүнчлэл</li>
+            <li>Хаяг байршил</li>
+            <li>Холбоо барих</li>
+          </ul>
+        </div>
+        <div className="moreInfo">
+          <ul>
+            <h3 className="title">Категори</h3>
+            <li>Муур</li>
+            <li>Нохой</li>
+            <li>Усан гахай</li>
+            <li>Туулай</li>
+          </ul>
+        </div>
+        <div className="moreInfo">
+          <h3 className="title">Захиа илгээх</h3>
+          <div >
+            <form action="" style={{
+              display: 'flex',
+              flexDirection: 'column',
+              marginBottom: '30px'
+            }}>
+              <input type="text" placeholder="Enter your email" style={{
+                padding: '10px'
+              }} />
+              <input type="submit" name="" id="" style={{
+                marginTop: '10px'
+              }} />
+            </form>
           </div>
         </div>
+        <div className="moreInfo">
 
-        <div style={{
-         display: 'flex',
-         justifyContent: 'center',
-         alignItems: 'center',
-         width: '100vw'
-      }}>
-        <p>© 2023s Амьтны дэлгүүр Ч.Чинбат </p>
-       </div>
+          <ul>
+            <h3 className="title">Холбоо барих</h3>
+            <li>pets124@gmail.com
+              <br />
+              Улаанбаатао хот
+              <br />
+              office : +12 34 995 0792</li>
+
+          </ul>
+        </div>
       </div>
-     
-      );
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center'
+      }}>
+        <p>© 2022 Амьтны дэлгүүр, Ч.Чинбат </p>
+      </div>
     </>
   );
 }

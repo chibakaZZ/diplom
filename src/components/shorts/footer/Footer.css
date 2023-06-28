@@ -70,11 +70,10 @@
   text-decoration: none;
 } 
 
-.petsFooter {
-  /* align-items: center; */
-  background-color: lightblue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.title {
+   color: white
+
+}
+.moreInfo{
+   /* background-color: aqua; */
 }
