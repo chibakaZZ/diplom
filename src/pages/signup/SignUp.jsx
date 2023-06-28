@@ -2,9 +2,9 @@ import "./SignUp.css";
 import Header from "../../components/navbar/Header";
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { authentication } from "../../firebase/firebase";
+import { auth } from "../../firebase/firebase";
 import { GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 
 function SignUp() {
@@ -14,9 +14,9 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [status, setStatus] = useState(false);
-
+  const [error, setError] = useState('')
   const signWithGoogle = () => {
-    signInWithPopup(authentication, provider)
+    signInWithPopup(auth, provider)
     .then((response)=>{
         console.log('response---->', response)
         alert('Google-r amjilttai bvrtgelee');
@@ -25,6 +25,21 @@ function SignUp() {
         console.log('error --<', error)
     })
 }
+
+const signUp = (e) => {
+  e.preventDefault();
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      console.log('ususuusu', userCredential);
+      setStatus("success");
+      history("/signin");
+    })
+    .catch((error) => {
+      console.log(error);
+      setStatus("Failed");
+      console.warn(error)
+    });
+};
 
   const history = useNavigate();
 
@@ -69,23 +84,30 @@ function SignUp() {
           <div className="info">
             <div className="infos">
               <div className="infotxt">Нэвтрэх нэр</div>
-              <input type="text" onChange={handleUsername} />
+              <input type="text" onChange={handleUsername} style={{borderRadius:'5px', border:'none'}}/>
             </div>
             <div className="infos">
               <div className="infotxt">Цахим шуудан</div>
-              <input type="text" onChange={handleEmail} />
+              <input type="text" onChange={handleEmail} style={{borderRadius:'5px', border:'none'}}/>
             </div>
             <div className="infos">
               <div className="infotxt">Нууц үг</div>
-              <input type="text" onChange={handlePassword} />
+              <input type="password"  onChange={handlePassword}  style={{borderRadius:'5px', border:'none'}}/>
             </div>
             <div className="infos">
               <div className="infotxt">Нууц үг дахин оруулна уу</div>
-              <input type="text" onChange={handleConfirmPassword} />
+              <input type="password" onChange={handleConfirmPassword} style={{borderRadius:'5px', border:'none'}} />
             </div>
           </div>
           <div>
-            <button onClick={handleSignUp}>Sign up</button>
+            <button onClick={signUp} className="signUpnbtn">Sign up</button>
+            <button onClick={signWithGoogle} className="signUpnbtn" style={{
+                marginLeft: '10px'
+
+            }}>
+                  Google
+              </button>
+
           </div>
           {/* <div>
             <button className="signinbtn">
