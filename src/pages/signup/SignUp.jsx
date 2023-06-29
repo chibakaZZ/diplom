@@ -32,6 +32,7 @@ const signUp = (e) => {
     .then((userCredential) => {
       console.log('ususuusu', userCredential);
       setStatus("success");
+     
       history("/signin");
     })
     .catch((error) => {

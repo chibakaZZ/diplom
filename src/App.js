@@ -14,6 +14,7 @@ import Cart from "./pages/cart/Cart.jsx";
 import User from "./pages/user/User.jsx";
 import ProductInfo from "./components/shorts/service/Service";
 import LoginHome from "./pages/LoginHome/LoginHome";
+import SingleDog from "./pages/LoginHome/SingleDog";
 // import NoPage from "./pages/NoPage";
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/user" element={<User />} />
         <Route path="/productinfo" element={<ProductInfo />} />
         <Route path="/login-home" element={<LoginHome />} />
+        <Route path="/:name" element={<SingleDog />}/>
         {/* <Route path="*" element={<NoPage />} /> */}
         {/* </Route> */}
       </Routes>

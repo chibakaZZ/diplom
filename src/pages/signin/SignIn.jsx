@@ -45,6 +45,7 @@ function SignIn() {
         console.log(userCredential);
         setStatus("success");
         //     history("/");
+        localStorage.setItem('auth', [username])
         history("/login-home");
       })
       .catch((error) => {

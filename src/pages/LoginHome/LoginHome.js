@@ -55,15 +55,7 @@ const LoginHome = () => {
               <h1 className="flex items-center justify-center text-center px-5 text-3xl font-bold lg:text-5xl text-white">
                 The Dog App
               </h1>
-              <p className="my-8 text-white">
-                This application is powered by{" "}
-                <a
-                  href="https://thedogapi.com"
-                  className="text-indigo-600 underline active:text-orange-400"
-                >
-                  The Dog Api
-                </a>
-              </p>
+             
 
               <form
                 onSubmit={handleSubmit}
@@ -74,7 +66,7 @@ const LoginHome = () => {
                   type="text"
                   name="search"
                   id="search"
-                  placeholder="Search for a dog / breed"
+                  placeholder="Нохой хайх / үүлдэр"
                   className="py-2 px-4 rounded shadow w-full bg-slate-400 text-white placeholder-white"
                   value={text}
                   onChange={(e) => setText(e.target.value)}
